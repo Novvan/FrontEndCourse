@@ -1,3 +1,4 @@
+import { configuracion } from './models/config';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular Master Course';
+  title = configuracion.titulo;
+  public descripcion: string;
+  public config;
+  public mostrar_videojuegos: boolean = true;
+
+  constructor(){
+    this.config = configuracion;
+    this.descripcion = configuracion.descripcion;
+  }
+  ocultarVideojuegos(value){
+    this.mostrar_videojuegos = value;
+  }
 }
