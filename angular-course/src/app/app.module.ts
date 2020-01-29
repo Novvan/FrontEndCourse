@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 
 import { VideoJuegoComponent } from './videojuego/videojuego.component';
 import { CursosComponent } from './cursos/cursos.component';
-import { from } from 'rxjs';
+import { HomeComponent } from './home/home.component';
+import { routing, appRoutingProviders } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -14,12 +15,16 @@ import { from } from 'rxjs';
     VideoJuegoComponent,
     ZapatillasComponent,
     CursosComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing,
   ],
-  providers: [],
+  providers: [
+    appRoutingProviders,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

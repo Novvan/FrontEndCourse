@@ -22,6 +22,7 @@ export class ZapatillasComponent implements OnInit{
       new Zapatilla('Mercurial', 'Nike', 'Gris', 35, true),
       new Zapatilla('Yeehze', 'Adidas', 'Negras', 50, false),
       new Zapatilla('Vaporfly', 'Nike', 'Gris', 30, true),
+      new Zapatilla('Predator', 'Adidas', 'Rojas', 100, true),
 
     ];
   }
@@ -40,7 +41,16 @@ export class ZapatillasComponent implements OnInit{
     console.log(this.marcas);
   }
 
-  getMarca(){
-    alert(this.mi_marca);
+  addMarca(){
+    this.marcas.push(this.mi_marca);
+    alert("Marca añadida");
+  }
+
+  deleteMarca(value){
+    this.marcas.splice(value, 1);
+  }
+
+  onBlur(){
+    console.log("Has salido del input");
   }
 }

@@ -1,0 +1,16 @@
+.altoprecio{
+    color: dimgrey;
+    font-size: 18px;
+}
+
+.subrayado{
+    text-decoration: underline;
+}
+
+.fondorojo{
+    background-color: red;
+}
+
+.active{
+    font-size: 20px;
+}

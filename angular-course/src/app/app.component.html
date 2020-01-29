@@ -2,8 +2,17 @@
   <h1>{{title}}</h1>
   <p>{{ descripcion }}</p>
   <br>
-  <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">Ocultar Juegos</button>
+
+  <nav>
+    <a [routerLink]="['/home']" routerLinkActive="active"> Home </a> &nbsp;
+    <a [routerLink]="['/zapatillas']" routerLinkActive="active"> Zapatillas </a>&nbsp;
+    <a [routerLink]="['/cursos']" routerLinkActive="active"> Cursos </a>&nbsp;
+    <a [routerLink]="['/videojuegos']" routerLinkActive="active"> Videojuegos </a>&nbsp;
+  </nav>
+  <hr>
+  <!-- <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">Ocultar Juegos</button>
   <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar Juegos</button>
-  <videojuego *ngIf="mostrar_videojuegos"></videojuego>
-  <zapatillas></zapatillas>
+  <videojuego *ngIf="mostrar_videojuegos"></videojuego> -->
+  <!-- <zapatillas></zapatillas> -->
+  <router-outlet></router-outlet>
 </div>
