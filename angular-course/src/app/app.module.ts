@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { routing, appRoutingProviders } from './app.routing';
 import { ExternosComponent } from './externos/externos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
+import { ContactoComponent } from './contacto/contacto.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     CursosComponent,
     HomeComponent,
     ExternosComponent,
+    CalculadoraPipe,
+    ContactoComponent,
   ],
   imports: [
     BrowserModule,
